@@ -2,7 +2,7 @@ import { useState } from "react";
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import BenefitsSection from "@/components/benefits-section";
-import MenuDemosSection from "@/components/menu-demos-section";
+import CursorMenuShowcase from "@/components/cursor-menu-showcase";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 import PhotoMenuModal from "@/components/menu-modals/photo-menu-modal";
@@ -27,7 +27,7 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <BenefitsSection />
-      <MenuDemosSection onOpenModal={openModal} />
+      <CursorMenuShowcase onOpenModal={openModal} />
       <ContactSection />
       <Footer />
       

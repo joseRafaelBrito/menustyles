@@ -1,0 +1,24 @@
+/generate react,js
+
+Purpose:
+Build a React demo component that showcases seven different “popup menu” styles triggered by cursor interactions (hover, right-click, click, long-press).
+
+Menu styles to implement:
+1. **Contextual Popover**: Right-click or long-press opens an inline popover next to the target element. Includes contextual actions like Cut, Copy, Paste, Delete. Follows best practices: max ~10 items, positioned based on viewport, keyboard-accessible with ARIA roles, close on Escape or click outside :contentReference[oaicite:1]{index=1}.
+2. **Mac-style Pop-up Control**: A button with a downward arrow triggers a single-choice popup (NSPopUpButton style). Shows up to 12 exclusive options, with current selection check-marked :contentReference[oaicite:2]{index=2}. No nested submenus.
+3. **Radial (Pie) Menu**: Circular layout on right-click, with directional gestures. Use emojis or icons for actions. Display 4–6 items—fast muscle-memory selection :contentReference[oaicite:3]{index=3}.
+4. **Side-panel Drawer**: Slide-in panel from the side (or bottom on mobile) opened via a hamburger or swipe. Contains navigation/actions.
+5. **Multi-level Hamburger Menu**: Nested submenus with clear hierarchy, icons, arrows, and breadcrumb trail. Avoid deep nesting beyond 2 levels :contentReference[oaicite:4]{index=4}.
+6. **Enhanced Menu with UX Features**: Add icons, hover tooltips, smooth open/close animations, item size ~48px, keyboard support :contentReference[oaicite:5]{index=5}.
+7. **Mixed UI Components**: Example: radial menu may spawn a linear submenu; contextual menu could include icons for frequent actions :contentReference[oaicite:6]{index=6}.
+
+Requirements:
+- Use a single React functional component (or modular subcomponents).
+- Hide the native cursor and implement a custom cursor div following mouse/touch.
+- Make all menus keyboard-accessible (tab navigation, Enter/Escape support).
+- Provide smooth CSS transitions for opening/closing.
+- Include ARIA roles (menu, menuitem, aria-expanded).
+- Style menus to adopt light/dark themes and be responsive.
+- Include inline comments and styling hooks.
+
+Expected output: A `<CursorMenuShowcase />` component that demonstrates all seven menu styles in a grid or interactive playground.
