@@ -314,7 +314,92 @@ export default function CursorMenuShowcase({ onOpenModal }: CursorMenuShowcasePr
   const [sideDrawer, setSideDrawer] = useState(false);
   const [multiLevelMenu, setMultiLevelMenu] = useState(false);
 
-  const menuStyles = [
+  // PopMenu-style menu layouts
+  const popMenuStyles = [
+    {
+      id: 'photo',
+      title: 'Full-Screen Photo Menu',
+      description: 'High-quality dish photography with detailed descriptions - perfect for upscale restaurants',
+      bestFor: 'Fine Dining',
+      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400',
+      component: (
+        <Button 
+          onClick={() => onOpenModal('photo')}
+          className="w-full bg-brand-red hover:bg-red-600 text-white group h-12"
+        >
+          <Star className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+          View Photo Menu
+        </Button>
+      )
+    },
+    {
+      id: 'grid',
+      title: 'Grid Menu with Icons',
+      description: 'Clean, organized layout with visual icons - ideal for cafes and quick-service restaurants',
+      bestFor: 'Cafes & QSR',
+      image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400',
+      component: (
+        <Button 
+          onClick={() => onOpenModal('grid')}
+          className="w-full bg-brand-red hover:bg-red-600 text-white group h-12"
+        >
+          <Info className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform" />
+          View Grid Menu
+        </Button>
+      )
+    },
+    {
+      id: 'tabbed',
+      title: 'Tabbed Menu Categories',
+      description: 'Organized by categories: appetizers, mains, drinks, desserts - perfect for full-service restaurants',
+      bestFor: 'Full-Service',
+      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400',
+      component: (
+        <Button 
+          onClick={() => onOpenModal('tabbed')}
+          className="w-full bg-brand-red hover:bg-red-600 text-white group h-12"
+        >
+          <Menu className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+          View Tabbed Menu
+        </Button>
+      )
+    },
+    {
+      id: 'carousel',
+      title: 'Carousel Menu Slider',
+      description: 'Interactive slider format optimized for mobile browsing and touch navigation',
+      bestFor: 'Mobile-First',
+      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400',
+      component: (
+        <Button 
+          onClick={() => onOpenModal('carousel')}
+          className="w-full bg-brand-red hover:bg-red-600 text-white group h-12"
+        >
+          <Download className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+          View Carousel Menu
+        </Button>
+      )
+    },
+    {
+      id: 'qr',
+      title: 'QR Code Menu',
+      description: 'Contactless ordering with QR codes - perfect for post-pandemic dining and quick service',
+      bestFor: 'Contactless',
+      image: 'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400',
+      component: (
+        <Button 
+          onClick={() => onOpenModal('qr')}
+          className="w-full bg-brand-red hover:bg-red-600 text-white group h-12"
+        >
+          <Search className="w-4 h-4 mr-2 group-hover:rotate-90 transition-transform" />
+          View QR Menu
+        </Button>
+      )
+    }
+  ];
+
+  // Interactive menu patterns
+  const interactivePatterns = [
     {
       id: 'contextual',
       title: 'Contextual Popover',
@@ -393,51 +478,6 @@ export default function CursorMenuShowcase({ onOpenModal }: CursorMenuShowcasePr
           </Button>
         </div>
       )
-    },
-    {
-      id: 'enhanced',
-      title: 'Enhanced Menu with UX Features',
-      description: 'Menu with icons, tooltips, and smooth animations',
-      interaction: 'Click',
-      component: (
-        <div className="flex items-center justify-center h-32">
-          <Button 
-            onClick={() => onOpenModal('photo')}
-            className="bg-brand-red hover:bg-red-600 text-white group"
-          >
-            <Star className="w-4 h-4 mr-2 group-hover:animate-pulse" />
-            Enhanced Demo
-          </Button>
-        </div>
-      )
-    },
-    {
-      id: 'mixed',
-      title: 'Mixed UI Components',
-      description: 'Combination of different menu interaction patterns',
-      interaction: 'Various',
-      component: (
-        <div className="flex items-center justify-center h-32 space-x-4">
-          <Button 
-            size="sm" 
-            variant="outline"
-            onClick={() => onOpenModal('grid')}
-            className="hover:scale-105 transition-transform"
-          >
-            <Info className="w-4 h-4 mr-1" />
-            Grid View
-          </Button>
-          <Button 
-            size="sm" 
-            variant="outline"
-            onClick={() => onOpenModal('carousel')}
-            className="hover:scale-105 transition-transform"
-          >
-            <Download className="w-4 h-4 mr-1" />
-            Carousel
-          </Button>
-        </div>
-      )
     }
   ];
 
@@ -465,40 +505,94 @@ export default function CursorMenuShowcase({ onOpenModal }: CursorMenuShowcasePr
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 animate-in fade-in-0 slide-in-from-top-4 duration-700">
-            Interactive Menu Showcase
+            Complete Menu Showcase
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto animate-in fade-in-0 slide-in-from-top-6 duration-700 delay-200">
-            Explore seven different menu interaction patterns with microanimations and smooth transitions. 
-            Each style offers unique user experiences optimized for different contexts.
+            Discover all available digital menu styles - from traditional PopMenu layouts to advanced interactive patterns with microanimations.
           </p>
         </div>
-        
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {menuStyles.map((style, index) => (
-            <div 
-              key={style.id} 
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group animate-in fade-in-0 slide-in-from-bottom-8 duration-700"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-brand-red transition-colors">
-                    {style.title}
-                  </h3>
-                  <span className="text-xs bg-brand-red text-white px-2 py-1 rounded-full">
-                    {style.interaction}
-                  </span>
-                </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm">
-                  {style.description}
-                </p>
-                <div className="mb-4">
+
+        {/* PopMenu-Style Traditional Layouts */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 animate-in fade-in-0 slide-in-from-left-4 duration-700">
+              PopMenu Digital Menu Styles
+            </h3>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Professional menu layouts used by over 10,000 restaurants worldwide. Each style is optimized for different restaurant types and customer experiences.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {popMenuStyles.map((style, index) => (
+              <div 
+                key={style.id} 
+                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group animate-in fade-in-0 slide-in-from-bottom-8 duration-700"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <img 
+                  src={style.image} 
+                  alt={style.title}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" 
+                />
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h4 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-brand-red transition-colors">
+                      {style.title}
+                    </h4>
+                    <span className="text-xs bg-brand-red text-white px-2 py-1 rounded-full">
+                      {style.bestFor}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm">
+                    {style.description}
+                  </p>
                   {style.component}
                 </div>
+                <div className="h-1 bg-gradient-to-r from-brand-red to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               </div>
-              <div className="h-1 bg-gradient-to-r from-brand-red to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        {/* Interactive Menu Patterns */}
+        <div>
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 animate-in fade-in-0 slide-in-from-right-4 duration-700">
+              Interactive Menu Patterns
+            </h3>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Advanced interaction patterns with custom cursor tracking, gesture controls, and microanimations for next-generation user experiences.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            {interactivePatterns.map((pattern, index) => (
+              <div 
+                key={pattern.id} 
+                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group animate-in fade-in-0 slide-in-from-bottom-8 duration-700"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-brand-red transition-colors">
+                      {pattern.title}
+                    </h4>
+                    <span className="text-xs bg-purple-600 text-white px-2 py-1 rounded-full">
+                      {pattern.interaction}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm">
+                    {pattern.description}
+                  </p>
+                  <div className="mb-4">
+                    {pattern.component}
+                  </div>
+                </div>
+                <div className="h-1 bg-gradient-to-r from-purple-600 to-purple-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
