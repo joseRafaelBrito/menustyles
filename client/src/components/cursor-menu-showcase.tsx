@@ -314,14 +314,14 @@ export default function CursorMenuShowcase({ onOpenModal }: CursorMenuShowcasePr
   const [sideDrawer, setSideDrawer] = useState(false);
   const [multiLevelMenu, setMultiLevelMenu] = useState(false);
 
-  // PopMenu-style menu layouts
-  const popMenuStyles = [
+  // Digital Menus Optimized for SEO – designed to boost your restaurant's visibility, attract more customers, and create a seamless ordering experience. - style menu layouts
+  const digitalMenuStyles = [
     {
       id: 'photo',
       title: 'Full-Screen Photo Menu',
       description: 'High-quality dish photography with detailed descriptions - perfect for upscale restaurants',
       bestFor: 'Fine Dining',
-      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400',
+      image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400',
       component: (
         <Button 
           onClick={() => onOpenModal('photo')}
@@ -508,15 +508,15 @@ export default function CursorMenuShowcase({ onOpenModal }: CursorMenuShowcasePr
             Complete Menu Showcase
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto animate-in fade-in-0 slide-in-from-top-6 duration-700 delay-200">
-            Discover all available digital menu styles - from traditional PopMenu layouts to advanced interactive patterns with microanimations.
+            Discover all available digital menu styles - from traditional Digital Menus Optimized for SEO – designed to boost your restaurant's visibility, attract more customers, and create a seamless ordering experience. layouts to advanced interactive patterns with microanimations.
           </p>
         </div>
 
-        {/* PopMenu-Style Traditional Layouts */}
+        {/* Digital Menus Optimized for SEO – designed to boost your restaurant's visibility, attract more customers, and create a seamless ordering experience. - Style Traditional Layouts */}
         <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 animate-in fade-in-0 slide-in-from-left-4 duration-700">
-              PopMenu Digital Menu Styles
+              Digital Menus Optimized for SEO – designed to boost your restaurant's visibility, attract more customers, and create a seamless ordering experience.
             </h3>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Professional menu layouts used by over 10,000 restaurants worldwide. Each style is optimized for different restaurant types and customer experiences.
@@ -524,7 +524,7 @@ export default function CursorMenuShowcase({ onOpenModal }: CursorMenuShowcasePr
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {popMenuStyles.map((style, index) => (
+            {digitalMenuStyles.map((style, index) => (
               <div 
                 key={style.id} 
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group animate-in fade-in-0 slide-in-from-bottom-8 duration-700"

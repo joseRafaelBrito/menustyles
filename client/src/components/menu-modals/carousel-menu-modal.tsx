@@ -10,19 +10,19 @@ interface CarouselMenuModalProps {
 
 const menuItems = [
   {
-    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
+    image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80",
     title: "Classic Burger",
     description: "Beef patty, lettuce, tomato, cheese, special sauce",
     price: "$9.99"
   },
   {
-    image: "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
+    image: "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80",
     title: "Loaded Nachos",
     description: "Crispy chips, cheese, jalapeños, sour cream, salsa",
     price: "$7.99"
   },
   {
-    image: "https://images.unsplash.com/photo-1565299585323-38174c4a6567?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
+    image: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80",
     title: "Fish Tacos",
     description: "Grilled fish, cabbage slaw, chipotle mayo, lime",
     price: "$8.99"
@@ -61,6 +61,7 @@ export default function CarouselMenuModal({ isOpen, onClose }: CarouselMenuModal
                       src={item.image} 
                       alt={item.title}
                       className="w-full h-48 object-cover rounded-lg mb-4" 
+                      loading="lazy"
                     />
                     <h4 className="text-lg font-semibold text-brand-dark mb-2">{item.title}</h4>
                     <p className="text-brand-muted text-sm mb-4">{item.description}</p>

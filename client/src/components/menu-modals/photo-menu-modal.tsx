@@ -18,9 +18,10 @@ export default function PhotoMenuModal({ isOpen, onClose }: PhotoMenuModalProps)
         <div className="space-y-8">
           <div className="grid md:grid-cols-2 gap-6">
             <img 
-              src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" 
-              alt="Gourmet appetizer plate with artistic presentation" 
+              src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" 
+              alt="Gourmet truffle risotto with artistic presentation" 
               className="w-full h-64 object-cover rounded-lg shadow-lg" 
+              loading="lazy"
             />
             <div className="space-y-4">
               <h4 className="text-xl font-semibold text-brand-dark">Truffle Risotto</h4>
@@ -46,9 +47,10 @@ export default function PhotoMenuModal({ isOpen, onClose }: PhotoMenuModalProps)
               </div>
             </div>
             <img 
-              src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" 
+              src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" 
               alt="Premium grilled salmon with gourmet garnishes" 
               className="w-full h-64 object-cover rounded-lg shadow-lg" 
+              loading="lazy"
             />
           </div>
         </div>

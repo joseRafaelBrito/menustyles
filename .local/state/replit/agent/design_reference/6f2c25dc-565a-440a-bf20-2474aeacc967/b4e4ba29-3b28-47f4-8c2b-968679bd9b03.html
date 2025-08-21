@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenuTech Pro - Digital Menu Design Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#2D3748',
+                        'brand-gray': '#4A5568',
+                        'brand-red': '#E53E3E',
+                        'brand-light': '#F7FAFC',
+                        'brand-text': '#1A202C',
+                        'brand-muted': '#718096'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-brand-light text-brand-text font-sans">
+    <!-- @COMPONENT: NavigationHeader -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-utensils text-brand-red text-2xl mr-3"></i>
+                    <span class="text-xl font-bold text-brand-dark">MenuTech Pro</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-brand-gray hover:text-brand-red transition-colors">Home</a>
+                    <a href="#features" class="text-brand-gray hover:text-brand-red transition-colors">Features</a>
+                    <a href="#demos" class="text-brand-gray hover:text-brand-red transition-colors">Demos</a>
+                    <a href="#contact" class="text-brand-gray hover:text-brand-red transition-colors">Contact</a>
+                    <button class="bg-brand-red text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">Get Started</button>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-brand-gray">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-brand-gray hover:text-brand-red">Home</a>
+                <a href="#features" class="block px-3 py-2 text-brand-gray hover:text-brand-red">Features</a>
+                <a href="#demos" class="block px-3 py-2 text-brand-gray hover:text-brand-red">Demos</a>
+                <a href="#contact" class="block px-3 py-2 text-brand-gray hover:text-brand-red">Contact</a>
+                <button class="w-full text-left bg-brand-red text-white px-3 py-2 rounded-lg mt-2">Get Started</button>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: NavigationHeader -->
+
+    <!-- @COMPONENT: HeroSection -->
+    <section id="home" class="pt-16 bg-gradient-to-br from-brand-light to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark leading-tight">
+                        Elevate Your Restaurant with 
+                        <span class="text-brand-red">Interactive Menus</span>
+                    </h1>
+                    <p class="text-xl text-brand-muted leading-relaxed">
+                        Transform your dining experience with modern, responsive digital menus that engage customers and boost sales. Perfect for restaurants, cafes, and food service establishments.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-brand-red text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-600 transition-colors">
+                            <i class="fas fa-play mr-2"></i>
+                            View Live Demos
+                        </button>
+                        <button class="border-2 border-brand-gray text-brand-gray px-8 py-4 rounded-lg font-semibold hover:bg-brand-gray hover:text-white transition-colors">
+                            <i class="fas fa-phone mr-2"></i>
+                            Schedule Call
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Modern restaurant interior with digital menu displays -->
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Modern restaurant interior with digital displays" class="rounded-2xl shadow-2xl w-full h-auto" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/20 to-transparent rounded-2xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroSection -->
+
+    <!-- @COMPONENT: BenefitsSection -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+                    Why Choose Digital Menus?
+                </h2>
+                <p class="text-xl text-brand-muted max-w-3xl mx-auto">
+                    Discover the advantages of modern digital menu systems that enhance customer experience and streamline operations.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-brand-light p-8 rounded-xl hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-brand-red rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-sync-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-brand-dark mb-4">Live Updates</h3>
+                    <p class="text-brand-muted">
+                        Update prices, availability, and menu items instantly without reprinting. Keep your menu current 24/7.
+                    </p>
+                </div>
+                
+                <div class="bg-brand-light p-8 rounded-xl hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-brand-red rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-brand-dark mb-4">Mobile-Friendly</h3>
+                    <p class="text-brand-muted">
+                        Optimized for all devices. Customers can easily browse your menu on their smartphones or tablets.
+                    </p>
+                </div>
+                
+                <div class="bg-brand-light p-8 rounded-xl hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-brand-red rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-brand-dark mb-4">Customer Engagement</h3>
+                    <p class="text-brand-muted">
+                        Interactive features like photos, descriptions, and reviews increase customer satisfaction and orders.
+                    </p>
+                </div>
+                
+                <div class="bg-brand-light p-8 rounded-xl hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-brand-red rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-brand-dark mb-4">Analytics & Insights</h3>
+                    <p class="text-brand-muted">
+                        Track popular items, customer preferences, and ordering patterns to optimize your menu strategy.
+                    </p>
+                </div>
+                
+                <div class="bg-brand-light p-8 rounded-xl hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-brand-red rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-dollar-sign text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-brand-dark mb-4">Cost Effective</h3>
+                    <p class="text-brand-muted">
+                        Eliminate printing costs and reduce waste. One-time setup pays for itself quickly.
+                    </p>
+                </div>
+                
+                <div class="bg-brand-light p-8 rounded-xl hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-brand-red rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-language text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-brand-dark mb-4">Multi-Language</h3>
+                    <p class="text-brand-muted">
+                        Serve international customers with multi-language support and dietary information.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: BenefitsSection -->
+
+    <!-- @COMPONENT: MenuDemosSection -->
+    <section id="demos" class="py-20 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+                    Choose Your Menu Style
+                </h2>
+                <p class="text-xl text-brand-muted max-w-3xl mx-auto">
+                    Explore our interactive menu designs. Each style is crafted for different restaurant types and customer experiences.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Full-Screen Photo Menu -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer menu-demo-card" data-menu-type="photo">
+                    <!-- Elegant fine dining food presentation -->
+                    <img src="https://pixabay.com/get/g0e0827d7bd1f0aa07514bf36900fe1715f53e4692e82db3e0b08a6e4458f49e342ec2f556abcd2eac4a5a3993dc4e55445cb795b8efd30d02afb83ecd97ece34_1280.jpg" alt="Elegant fine dining food presentation" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-brand-dark mb-2">Full-Screen Photo Menu</h3>
+                        <p class="text-brand-muted mb-4">Perfect for upscale restaurants. High-quality images showcase dishes beautifully.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-brand-red font-medium">Best for: Fine Dining</span>
+                            <button class="bg-brand-red text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                <i class="fas fa-eye mr-2"></i>Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Grid Menu with Icons -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer menu-demo-card" data-menu-type="grid">
+                    <!-- Colorful cafe menu items with coffee and pastries -->
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Colorful cafe menu items with coffee and pastries" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-brand-dark mb-2">Grid Menu with Icons</h3>
+                        <p class="text-brand-muted mb-4">Clean, organized layout ideal for cafes and quick-service restaurants.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-brand-red font-medium">Best for: Cafes & QSR</span>
+                            <button class="bg-brand-red text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                <i class="fas fa-eye mr-2"></i>Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tabbed Menu -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer menu-demo-card" data-menu-type="tabbed">
+                    <!-- Diverse restaurant menu categories including appetizers and drinks -->
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Diverse restaurant menu categories including appetizers and drinks" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-brand-dark mb-2">Tabbed Menu</h3>
+                        <p class="text-brand-muted mb-4">Organized by categories: appetizers, mains, drinks, desserts. Easy navigation.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-brand-red font-medium">Best for: Full-Service</span>
+                            <button class="bg-brand-red text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                <i class="fas fa-eye mr-2"></i>Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Menu -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer menu-demo-card" data-menu-type="carousel">
+                    <!-- Interactive mobile food ordering interface -->
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Interactive mobile food ordering interface" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-brand-dark mb-2">Carousel Menu</h3>
+                        <p class="text-brand-muted mb-4">Interactive slider format optimized for mobile browsing and touch navigation.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-brand-red font-medium">Best for: Mobile-First</span>
+                            <button class="bg-brand-red text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                <i class="fas fa-eye mr-2"></i>Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- QR Menu Demo -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer menu-demo-card" data-menu-type="qr">
+                    <!-- QR code scanning for contactless restaurant ordering -->
+                    <img src="https://pixabay.com/get/ga34c4572e24587f12dfd9328deadc7e92e2aaaf16c2cb51a1cefc74b0245c53b59422b1d55a8099aba9035109dc4f68882599d595bfc560fc11d44a2efdf766d_1280.jpg" alt="QR code scanning for contactless restaurant ordering" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-brand-dark mb-2">QR Menu Demo</h3>
+                        <p class="text-brand-muted mb-4">Contactless ordering with QR codes. Perfect for post-pandemic dining.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-brand-red font-medium">Best for: Contactless</span>
+                            <button class="bg-brand-red text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                <i class="fas fa-eye mr-2"></i>Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Custom Solution -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer">
+                    <!-- Modern restaurant technology setup -->
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Modern restaurant technology setup" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-brand-dark mb-2">Custom Solution</h3>
+                        <p class="text-brand-muted mb-4">Need something unique? We create custom digital menu experiences tailored to your brand.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-brand-red font-medium">Best for: Unique Brands</span>
+                            <button class="bg-brand-red text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                <i class="fas fa-comments mr-2"></i>Discuss
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: MenuDemosSection -->
+
+    <!-- @COMPONENT: ContactSection -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">
+                        Ready to Transform Your Menu?
+                    </h2>
+                    <p class="text-xl text-brand-muted mb-8">
+                        Get started with MenuTech Pro today. Our team will help you create the perfect digital menu solution for your restaurant.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-brand-red rounded-lg flex items-center justify-center">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-brand-dark">Phone</h3>
+                                <p class="text-brand-muted">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-brand-red rounded-lg flex items-center justify-center">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-brand-dark">Email</h3>
+                                <p class="text-brand-muted">hello@menutechpro.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-brand-red rounded-lg flex items-center justify-center">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-brand-dark">Response Time</h3>
+                                <p class="text-brand-muted">Within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="font-semibold text-brand-dark mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-brand-gray rounded-lg flex items-center justify-center hover:bg-brand-red transition-colors">
+                                <i class="fab fa-facebook text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-brand-gray rounded-lg flex items-center justify-center hover:bg-brand-red transition-colors">
+                                <i class="fab fa-twitter text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-brand-gray rounded-lg flex items-center justify-center hover:bg-brand-red transition-colors">
+                                <i class="fab fa-instagram text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-brand-gray rounded-lg flex items-center justify-center hover:bg-brand-red transition-colors">
+                                <i class="fab fa-linkedin text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-brand-light p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold text-brand-dark mb-6">Get Your Free Quote</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-brand-dark mb-2">Restaurant Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red" placeholder="Donatello's Pizza" />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-brand-dark mb-2">Your Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red" placeholder="John Smith" />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-brand-dark mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red" placeholder="john@donatellospizza.com" />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-brand-dark mb-2">Phone</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red" placeholder="+1 (555) 123-4567" />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-brand-dark mb-2">Restaurant Type</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red">
+                                <option>Fine Dining</option>
+                                <option>Casual Dining</option>
+                                <option>Fast Casual</option>
+                                <option>Cafe</option>
+                                <option>Food Truck</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-brand-dark mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-red" placeholder="Tell us about your digital menu needs..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-brand-red text-white py-4 rounded-lg font-semibold hover:bg-red-600 transition-colors">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ContactSection -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-brand-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-utensils text-brand-red text-2xl mr-3"></i>
+                        <span class="text-xl font-bold">MenuTech Pro</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Transforming restaurant experiences with innovative digital menu solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-brand-red transition-colors">
+                            <i class="fab fa-facebook text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-brand-red transition-colors">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-brand-red transition-colors">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-brand-red transition-colors">
+                            <i class="fab fa-linkedin text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Digital Menu Design</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">QR Code Integration</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Mobile Optimization</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Custom Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact Support</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Training</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 MenuTech Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- @COMPONENT: MenuModals -->
+    <!-- Photo Menu Modal -->
+    <div id="photo-menu-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center h-full p-4">
+            <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6 border-b border-gray-200">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-2xl font-bold text-brand-dark">Donatello's Fine Dining</h3>
+                        <button class="modal-close text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <p class="text-brand-muted mt-2">Experience our full-screen photo menu perfect for upscale dining</p>
+                </div>
+                
+                <div class="p-6 space-y-8">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Gourmet appetizer plate with artistic presentation -->
+                        <img src="https://pixabay.com/get/g2608e66b59409675360f0cea7cd25e1d29caad4dd55779b29d74712def5645d5ba61bc24adcfa19654faec10227641cddc2b7d4fedaf7bdac083b2160af1e5e6_1280.jpg" alt="Gourmet appetizer plate with artistic presentation" class="w-full h-64 object-cover rounded-lg shadow-lg" />
+                        <div class="space-y-4">
+                            <h4 class="text-xl font-semibold text-brand-dark">Truffle Risotto</h4>
+                            <p class="text-brand-muted">Creamy arborio rice with black truffle, parmesan, and fresh herbs</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-red">$28</span>
+                                <button class="bg-brand-red text-white px-6 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                    Order Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <h4 class="text-xl font-semibold text-brand-dark">Grilled Salmon</h4>
+                            <p class="text-brand-muted">Fresh Atlantic salmon with lemon butter sauce and seasonal vegetables</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-red">$32</span>
+                                <button class="bg-brand-red text-white px-6 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                    Order Now
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Premium grilled salmon with gourmet garnishes -->
+                        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Premium grilled salmon with gourmet garnishes" class="w-full h-64 object-cover rounded-lg shadow-lg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grid Menu Modal -->
+    <div id="grid-menu-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center h-full p-4">
+            <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6 border-b border-gray-200">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-2xl font-bold text-brand-dark">Sunrise Cafe</h3>
+                        <button class="modal-close text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <p class="text-brand-muted mt-2">Clean grid layout perfect for cafes and quick-service restaurants</p>
+                </div>
+                
+                <div class="p-6">
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-brand-light p-6 rounded-xl text-center">
+                            <i class="fas fa-coffee text-4xl text-brand-red mb-4"></i>
+                            <h4 class="text-lg font-semibold text-brand-dark mb-2">Cappuccino</h4>
+                            <p class="text-brand-muted text-sm mb-4">Rich espresso with steamed milk foam</p>
+                            <span class="text-xl font-bold text-brand-red">$4.50</span>
+                        </div>
+                        
+                        <div class="bg-brand-light p-6 rounded-xl text-center">
+                            <i class="fas fa-cookie-bite text-4xl text-brand-red mb-4"></i>
+                            <h4 class="text-lg font-semibold text-brand-dark mb-2">Croissant</h4>
+                            <p class="text-brand-muted text-sm mb-4">Fresh buttery pastry, plain or almond</p>
+                            <span class="text-xl font-bold text-brand-red">$3.25</span>
+                        </div>
+                        
+                        <div class="bg-brand-light p-6 rounded-xl text-center">
+                            <i class="fas fa-seedling text-4xl text-brand-red mb-4"></i>
+                            <h4 class="text-lg font-semibold text-brand-dark mb-2">Avocado Toast</h4>
+                            <p class="text-brand-muted text-sm mb-4">Smashed avocado on sourdough bread</p>
+                            <span class="text-xl font-bold text-brand-red">$8.75</span>
+                        </div>
+                        
+                        <div class="bg-brand-light p-6 rounded-xl text-center">
+                            <i class="fas fa-bacon text-4xl text-brand-red mb-4"></i>
+                            <h4 class="text-lg font-semibold text-brand-dark mb-2">Breakfast Wrap</h4>
+                            <p class="text-brand-muted text-sm mb-4">Eggs, bacon, cheese in flour tortilla</p>
+                            <span class="text-xl font-bold text-brand-red">$6.50</span>
+                        </div>
+                        
+                        <div class="bg-brand-light p-6 rounded-xl text-center">
+                            <i class="fas fa-leaf text-4xl text-brand-red mb-4"></i>
+                            <h4 class="text-lg font-semibold text-brand-dark mb-2">Green Smoothie</h4>
+                            <p class="text-brand-muted text-sm mb-4">Spinach, banana, mango, coconut milk</p>
+                            <span class="text-xl font-bold text-brand-red">$5.95</span>
+                        </div>
+                        
+                        <div class="bg-brand-light p-6 rounded-xl text-center">
+                            <i class="fas fa-apple-alt text-4xl text-brand-red mb-4"></i>
+                            <h4 class="text-lg font-semibold text-brand-dark mb-2">Apple Pie</h4>
+                            <p class="text-brand-muted text-sm mb-4">Homemade with cinnamon and vanilla</p>
+                            <span class="text-xl font-bold text-brand-red">$4.25</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabbed Menu Modal -->
+    <div id="tabbed-menu-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center h-full p-4">
+            <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6 border-b border-gray-200">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-2xl font-bold text-brand-dark">Bella Vista Restaurant</h3>
+                        <button class="modal-close text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <p class="text-brand-muted mt-2">Organized tabbed menu perfect for full-service restaurants</p>
+                </div>
+                
+                <div class="p-6">
+                    <div class="flex space-x-4 mb-6 border-b border-gray-200">
+                        <button class="tab-btn active px-6 py-3 font-medium text-brand-red border-b-2 border-brand-red" data-tab="appetizers">Appetizers</button>
+                        <button class="tab-btn px-6 py-3 font-medium text-brand-muted hover:text-brand-red" data-tab="mains">Main Courses</button>
+                        <button class="tab-btn px-6 py-3 font-medium text-brand-muted hover:text-brand-red" data-tab="drinks">Drinks</button>
+                        <button class="tab-btn px-6 py-3 font-medium text-brand-muted hover:text-brand-red" data-tab="desserts">Desserts</button>
+                    </div>
+                    
+                    <div id="appetizers" class="tab-content">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="flex space-x-4">
+                                <!-- Artisanal bruschetta with fresh tomatoes and basil -->
+                                <img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=100" alt="Artisanal bruschetta with fresh tomatoes and basil" class="w-20 h-20 object-cover rounded-lg" />
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-brand-dark">Bruschetta</h4>
+                                    <p class="text-sm text-brand-muted">Fresh tomatoes, basil, garlic on toasted bread</p>
+                                    <span class="text-brand-red font-bold">$8.50</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex space-x-4">
+                                <!-- Creamy caesar salad with parmesan and croutons -->
+                                <img src="https://images.unsplash.com/photo-1551248429-40975aa4de74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=100" alt="Creamy caesar salad with parmesan and croutons" class="w-20 h-20 object-cover rounded-lg" />
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-brand-dark">Caesar Salad</h4>
+                                    <p class="text-sm text-brand-muted">Crisp romaine, parmesan, croutons, Caesar dressing</p>
+                                    <span class="text-brand-red font-bold">$12.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="mains" class="tab-content hidden">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="flex space-x-4">
+                                <!-- Traditional wood-fired pizza with fresh mozzarella -->
+                                <img src="https://pixabay.com/get/gc38482c24db81529e2e33ad97918ae00da49be91082e442aa6dc254d98615d0aa817ac15542c89cb374be251b17cd5b35a0ee792c355013f592ccdb968ac7577_1280.jpg" alt="Traditional wood-fired pizza with fresh mozzarella" class="w-20 h-20 object-cover rounded-lg" />
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-brand-dark">Margherita Pizza</h4>
+                                    <p class="text-sm text-brand-muted">Fresh mozzarella, tomatoes, basil, olive oil</p>
+                                    <span class="text-brand-red font-bold">$16.50</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex space-x-4">
+                                <!-- Perfectly cooked pasta with rich tomato sauce -->
+                                <img src="https://pixabay.com/get/g7a26160d28eeff8f7102ab5f3739edf553bcdfd20a63fa40a237bb46e53396482ffbb5eaade0377be30cd681e4038b12cf506b322f21e9af0f9af3728810bd79_1280.jpg" alt="Perfectly cooked pasta with rich tomato sauce" class="w-20 h-20 object-cover rounded-lg" />
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-brand-dark">Spaghetti Carbonara</h4>
+                                    <p class="text-sm text-brand-muted">Eggs, bacon, parmesan, black pepper</p>
+                                    <span class="text-brand-red font-bold">$18.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="drinks" class="tab-content hidden">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="flex space-x-4">
+                                <!-- Elegant wine glass with red wine -->
+                                <img src="https://pixabay.com/get/g991b1b05cdfd0fb050c273e9456ac0c16ad3331b67dedac6c8662f52bd0ea940bd52f6359271ca6d86d7abe75ed7ec2bc7ccde0febd589a6abdcfeb19e4ecd33_1280.jpg" alt="Elegant wine glass with red wine" class="w-20 h-20 object-cover rounded-lg" />
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-brand-dark">House Wine</h4>
+                                    <p class="text-sm text-brand-muted">Red, white, or rosé by the glass</p>
+                                    <span class="text-brand-red font-bold">$8.00</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex space-x-4">
+                                <!-- Refreshing craft cocktail with garnish -->
+                                <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=100" alt="Refreshing craft cocktail with garnish" class="w-20 h-20 object-cover rounded-lg" />
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-brand-dark">Signature Cocktail</h4>
+                                    <p class="text-sm text-brand-muted">Ask your server about today's special</p>
+                                    <span class="text-brand-red font-bold">$12.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="desserts" class="tab-content hidden">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="flex space-x-4">
+                                <!-- Decadent chocolate dessert with berries -->
+                                <img src="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=100" alt="Decadent chocolate dessert with berries" class="w-20 h-20 object-cover rounded-lg" />
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-brand-dark">Tiramisu</h4>
+                                    <p class="text-sm text-brand-muted">Classic Italian dessert with mascarpone</p>
+                                    <span class="text-brand-red font-bold">$7.50</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex space-x-4">
+                                <!-- Artisanal gelato with fresh fruit -->
+                                <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=100" alt="Artisanal gelato with fresh fruit" class="w-20 h-20 object-cover rounded-lg" />
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-brand-dark">Gelato</h4>
+                                    <p class="text-sm text-brand-muted">Three scoops of seasonal flavors</p>
+                                    <span class="text-brand-red font-bold">$6.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel Menu Modal -->
+    <div id="carousel-menu-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center h-full p-4">
+            <div class="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6 border-b border-gray-200">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-2xl font-bold text-brand-dark">Food Truck Express</h3>
+                        <button class="modal-close text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <p class="text-brand-muted mt-2">Mobile-optimized carousel menu</p>
+                </div>
+                
+                <div class="p-6">
+                    <div class="relative">
+                        <div class="carousel-container overflow-hidden">
+                            <div class="carousel-track flex transition-transform duration-300" style="transform: translateX(0%);">
+                                <div class="carousel-item min-w-full">
+                                    <div class="bg-brand-light p-6 rounded-xl text-center">
+                                        <!-- Gourmet burger with fresh ingredients -->
+                                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" alt="Gourmet burger with fresh ingredients" class="w-full h-48 object-cover rounded-lg mb-4" />
+                                        <h4 class="text-lg font-semibold text-brand-dark mb-2">Classic Burger</h4>
+                                        <p class="text-brand-muted text-sm mb-4">Beef patty, lettuce, tomato, cheese, special sauce</p>
+                                        <span class="text-2xl font-bold text-brand-red">$9.99</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="carousel-item min-w-full">
+                                    <div class="bg-brand-light p-6 rounded-xl text-center">
+                                        <!-- Loaded nachos with melted cheese and toppings -->
+                                        <img src="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" alt="Loaded nachos with melted cheese and toppings" class="w-full h-48 object-cover rounded-lg mb-4" />
+                                        <h4 class="text-lg font-semibold text-brand-dark mb-2">Loaded Nachos</h4>
+                                        <p class="text-brand-muted text-sm mb-4">Crispy chips, cheese, jalapeños, sour cream, salsa</p>
+                                        <span class="text-2xl font-bold text-brand-red">$7.99</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="carousel-item min-w-full">
+                                    <div class="bg-brand-light p-6 rounded-xl text-center">
+                                        <!-- Golden crispy tacos with fresh toppings -->
+                                        <img src="https://pixabay.com/get/g34b16f729e71c21226d019fd7d71714a12f0bba273cfd8c7c1fbbc695e77fa544a9990371b170bbe0cc593fab6563ab908b31e8a04a5fec37139a6a8fa2baed4_1280.jpg" alt="Golden crispy tacos with fresh toppings" class="w-full h-48 object-cover rounded-lg mb-4" />
+                                        <h4 class="text-lg font-semibold text-brand-dark mb-2">Fish Tacos</h4>
+                                        <p class="text-brand-muted text-sm mb-4">Grilled fish, cabbage slaw, chipotle mayo, lime</p>
+                                        <span class="text-2xl font-bold text-brand-red">$8.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100">
+                            <i class="fas fa-chevron-left text-brand-gray"></i>
+                        </button>
+                        <button class="carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100">
+                            <i class="fas fa-chevron-right text-brand-gray"></i>
+                        </button>
+                        
+                        <div class="flex justify-center mt-4 space-x-2">
+                            <button class="carousel-dot w-3 h-3 rounded-full bg-brand-red"></button>
+                            <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300"></button>
+                            <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Menu Modal -->
+    <div id="qr-menu-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center h-full p-4">
+            <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6 border-b border-gray-200">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-2xl font-bold text-brand-dark">QR Code Menu Demo</h3>
+                        <button class="modal-close text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <p class="text-brand-muted mt-2">Contactless ordering with QR codes</p>
+                </div>
+                
+                <div class="p-6">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="text-center">
+                            <h4 class="text-lg font-semibold text-brand-dark mb-4">Scan to View Menu</h4>
+                            <div class="bg-brand-light p-8 rounded-xl">
+                                <!-- QR code placeholder -->
+                                <div class="w-48 h-48 bg-white border-4 border-brand-dark mx-auto mb-4 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <i class="fas fa-qrcode text-6xl text-brand-dark mb-2"></i>
+                                        <p class="text-xs text-brand-muted">SAMPLE QR CODE</p>
+                                    </div>
+                                </div>
+                                <p class="text-brand-muted text-sm">Point your phone camera at this code</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-brand-dark mb-4">How it works:</h4>
+                                <div class="space-y-3">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                                            <span class="text-white font-bold text-sm">1</span>
+                                        </div>
+                                        <p class="text-brand-muted">Customer scans QR code with phone camera</p>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                                            <span class="text-white font-bold text-sm">2</span>
+                                        </div>
+                                        <p class="text-brand-muted">Digital menu opens instantly in browser</p>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                                            <span class="text-white font-bold text-sm">3</span>
+                                        </div>
+                                        <p class="text-brand-muted">Browse menu, add items to cart</p>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                                            <span class="text-white font-bold text-sm">4</span>
+                                        </div>
+                                        <p class="text-brand-muted">Order sent directly to kitchen</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-brand-light p-4 rounded-lg">
+                                <h5 class="font-semibold text-brand-dark mb-2">Benefits:</h5>
+                                <ul class="text-sm text-brand-muted space-y-1">
+                                    <li>• No app download required</li>
+                                    <li>• Contactless and hygienic</li>
+                                    <li>• Works on any smartphone</li>
+                                    <li>• Instant menu updates</li>
+                                    <li>• Order tracking included</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- @END_COMPONENT: MenuModals -->
+
+    <script>
+        (function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Modal functionality
+            const menuCards = document.querySelectorAll('.menu-demo-card');
+            const modals = document.querySelectorAll('[id$="-modal"]');
+            const closeButtons = document.querySelectorAll('.modal-close');
+
+            menuCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const menuType = this.dataset.menuType;
+                    const modal = document.getElementById(menuType + '-menu-modal');
+                    if (modal) {
+                        modal.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const modal = this.closest('[id$="-modal"]');
+                    if (modal) {
+                        modal.classList.add('hidden');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            });
+
+            // Close modal when clicking outside
+            modals.forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        this.classList.add('hidden');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            });
+
+            // Tab functionality for tabbed menu
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabName = this.dataset.tab;
+                    
+                    // Remove active class from all buttons
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active', 'text-brand-red', 'border-b-2', 'border-brand-red');
+                        btn.classList.add('text-brand-muted');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active', 'text-brand-red', 'border-b-2', 'border-brand-red');
+                    this.classList.remove('text-brand-muted');
+                    
+                    // Hide all tab contents
+                    tabContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    
+                    // Show selected tab content
+                    const selectedContent = document.getElementById(tabName);
+                    if (selectedContent) {
+                        selectedContent.classList.remove('hidden');
+                    }
+                });
+            });
+
+            // Carousel functionality
+            let currentSlide = 0;
+            const carouselTrack = document.querySelector('.carousel-track');
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            const carouselDots = document.querySelectorAll('.carousel-dot');
+            const prevBtn = document.querySelector('.carousel-prev');
+            const nextBtn = document.querySelector('.carousel-next');
+
+            function updateCarousel() {
+                if (carouselTrack) {
+                    carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    
+                    // Update dots
+                    carouselDots.forEach((dot, index) => {
+                        if (index === currentSlide) {
+                            dot.classList.add('bg-brand-red');
+                            dot.classList.remove('bg-gray-300');
+                        } else {
+                            dot.classList.remove('bg-brand-red');
+                            dot.classList.add('bg-gray-300');
+                        }
+                    });
+                }
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function() {
+                    currentSlide = (currentSlide + 1) % carouselItems.length;
+                    updateCarousel();
+                });
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function() {
+                    currentSlide = (currentSlide - 1 + carouselItems.length) % carouselItems.length;
+                    updateCarousel();
+                });
+            }
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Form submission handler
+            document.querySelector('form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // TODO: Implement form submission logic
+                alert('Thank you for your interest! We will contact you soon.');
+            });
+        })();
+    </script>
+</body>
+</html>

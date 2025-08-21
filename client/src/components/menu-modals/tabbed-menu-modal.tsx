@@ -10,13 +10,13 @@ interface TabbedMenuModalProps {
 const menuCategories = {
   appetizers: [
     {
-      image: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=100",
+      image: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=100&q=80",
       title: "Bruschetta",
       description: "Fresh tomatoes, basil, garlic on toasted bread",
       price: "$8.50"
     },
     {
-      image: "https://images.unsplash.com/photo-1551248429-40975aa4de74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=100",
+      image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=100&q=80",
       title: "Caesar Salad",
       description: "Crisp romaine, parmesan, croutons, Caesar dressing",
       price: "$12.00"
@@ -24,13 +24,13 @@ const menuCategories = {
   ],
   mains: [
     {
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=100",
+      image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=100&q=80",
       title: "Margherita Pizza",
       description: "Fresh mozzarella, tomatoes, basil, olive oil",
       price: "$16.50"
     },
     {
-      image: "https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=100",
+      image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=100&q=80",
       title: "Spaghetti Carbonara",
       description: "Eggs, bacon, parmesan, black pepper",
       price: "$18.00"
@@ -38,13 +38,13 @@ const menuCategories = {
   ],
   drinks: [
     {
-      image: "https://images.unsplash.com/photo-1546195643-70db1fe30985?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=100",
+      image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=100&q=80",
       title: "House Wine",
       description: "Red, white, or rosé by the glass",
       price: "$8.00"
     },
     {
-      image: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=100",
+      image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=100&q=80",
       title: "Signature Cocktail",
       description: "Ask your server about today's special",
       price: "$12.00"
@@ -52,13 +52,13 @@ const menuCategories = {
   ],
   desserts: [
     {
-      image: "https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=100",
+      image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=100&q=80",
       title: "Tiramisu",
       description: "Classic Italian dessert with mascarpone",
       price: "$7.50"
     },
     {
-      image: "https://images.unsplash.com/photo-1488900128323-21503983a07e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=100",
+      image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=100&q=80",
       title: "Gelato",
       description: "Three scoops of seasonal flavors",
       price: "$6.00"
@@ -92,6 +92,7 @@ export default function TabbedMenuModal({ isOpen, onClose }: TabbedMenuModalProp
                       src={item.image} 
                       alt={item.title}
                       className="w-20 h-20 object-cover rounded-lg" 
+                      loading="lazy"
                     />
                     <div className="flex-1">
                       <h4 className="font-semibold text-brand-dark">{item.title}</h4>
